@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+sales = [500000, 480000, 300000, 420000, 350000, 450000, 380000, 280000, 320000, 600000, 680000, 750000]
+fig, ax = plt.subplots(1, 2, figsize=(12, 5))
+ax[0].plot(months, sales, marker='o')
+ax[0].set_title("Monthly Sales (Line)")
+ax[0].set_xlabel("Month")
+ax[0].set_ylabel("Revenue")
+ax[1].bar(months, sales)
+ax[1].set_title("Monthly Sales (Bar)")
+ax[1].set_xlabel("Month")
+ax[1].set_ylabel("Revenue")
+plt.tight_layout()
+plt.show()
